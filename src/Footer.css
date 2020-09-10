@@ -1,0 +1,31 @@
+.footer {
+  width: 100%;
+  background-color: #232F3E;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.footer__content {
+  max-width: 1500px;
+  margin: 0 auto !important;
+}
+
+.footer__content h4 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer__contentMenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #DDD;
+  font-size: 14px;
+}
+
+.footer__contentMenu li {
+  margin: 2px 0;
+}

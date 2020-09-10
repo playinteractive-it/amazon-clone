@@ -3,6 +3,7 @@
   padding: 20px;
   background-color: white;
   height: max-content;
+  flex-grow: 2;
 }
 
 .checkout__ad {
@@ -12,6 +13,29 @@
 
 .checkout__title {
   margin-right: 10px;
+  margin-bottom: 20px;
+  text-align: center;
   padding: 10px;
-  border-bottom: 1px solid lightgray;
+}
+
+.item-appear {
+  opacity: 0;
+}
+.item-appear-done {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
 }

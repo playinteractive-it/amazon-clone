@@ -1,9 +1,14 @@
 import React from 'react';
 import './Checkout.css';
 import Subtotal from './Subtotal';
+import CheckoutProduct from './CheckoutProduct';
+import { useStateValue } from './StateProvider';
+import { Slide } from "react-awesome-reveal";
 
 
 function Checkout() {
+  const [{ basket, user }] = useStateValue();
+
   return (
     <div className="checkout">
       <div className="checkout__left">
@@ -13,10 +18,25 @@ function Checkout() {
           alt="Banner"
         />
         <div>
-          <h2 className="checkout__title">Your shopping Basket</h2>
-          {/* BasketItem */}
-          {/* BasketItem */}
-          {/* BasketItem */}
+          <h2 className="checkout__title">Your shopping Basket <small>({user ? user.email : 'Guest'})</small></h2>
+  
+          <Slide
+            cascade
+            fraction={0.2}
+            duration={500}
+            damping={0.1}
+            triggerOnce={true}
+          >
+            {basket.map((item, i) => (
+              <CheckoutProduct
+                id={item.id}
+                title={item.title}
+                image={item.image}
+                price={item.price}
+                rating={item.rating}
+              />
+            ))}
+          </Slide>
         </div>
       </div>
 

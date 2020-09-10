@@ -1,0 +1,96 @@
+.login {
+  background-color: white;
+  background: url('assets/images/amazon_bg.png');
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.login::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(255,255,255,.95), 90%, rgba(255,255,255,.9));
+}
+
+.login__logo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  width: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.login__container {
+  width: 300px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid rgba(211, 211, 211, 0.5);
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, .1);
+  z-index: 100;
+}
+
+.login__container h2 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.login__container form > h5 {
+  margin-bottom: 5px;
+}
+
+
+.login__container form > input {
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: white;
+  width: 98%;
+}
+
+.login__container p {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+
+.login__signinButton {
+  background: #f0c14b;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  cursor: pointer;
+}
+.login__signinButton:hover {
+  background: #ebb733;
+}
+
+.login__registerButton {
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: darkgray;
+  color: #111;
+  cursor: pointer;
+}
+.login__registerButton:hover {
+  background: lightgray;
+}
